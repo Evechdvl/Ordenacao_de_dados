@@ -81,28 +81,56 @@ public class ProgramaPrincipal {
             opcao = scanner.nextInt();
 
             switch (opcao) {
-                case 1:
-                	String path = tipoArquivo();                	
+                case 1:              	
 
                     System.out.println("Selecionou Seleção Direta");
+		vetor.selecaoDireta();
+		System.out.println("\nVetor ordenado: \n" + vetor.toString());
+		System.out.println("Num. Comparacoes: \n" + vetor.getComparacaoSelecao());
+		System.out.println("Num. movimentação: \n" + vetor.getMovimentacaoSelecao());
+			    
                     break;
                 case 2:
                     System.out.println("Selecionou Heapsort");
+		    vetor.heapSort();
+		    System.out.println("Num. Comparacoes: \n" + vetor.contComparacaoHeap() + "\nVetor ordenado: \n" + vetor.toString());
                     break;
                 case 3:
                     System.out.println("Selecionou Inserção Direta");
+				vetor.insercaoDireta();
+			    System.out.println("\nVetor ordenado: \n" + vetor.toString());
+		System.out.println("Num. Comparacoes: \n" + vetor.getcomparacaoInsert());
+		System.out.println("Num. movimentação: \n" + vetor.getmovimentacaoInsert());
+			    
                     break;
                 case 4:
                     System.out.println("Selecionou Shellsort");
+			    vetor.shellSort();
+		System.out.println("\nVetor ordenado: \n" + vetor.toString());
+		System.out.println("Num. Comparacoes: \n" + vetor.getComparacaoshell());
+		System.out.println("Num. movimentação: \n" + vetor.getMovimentacaoshell());
                     break;
                 case 5:
                     System.out.println("Selecionou Bubblesort");
+		vetor.bubblesort();  
+		System.out.println("\nVetor ordenado: \n" + vetor.toString());
+		System.out.println("Num. Comparacoes: \n" + vetor.getContComparacaoBubble());
+		System.out.println("Num. movimentação: \n" + vetor.getContTrocaBubble());
                     break;
                 case 6:
                     System.out.println("Selecionou Shakesort");
+			    vetor.shakersort();
+		System.out.println("\nVetor ordenado: \n" + vetor.toString());
+		System.out.println("Num. Comparacoes: \n" + vetor.getContComparacaoShaker());
+		System.out.println("Num. movimentação: \n" + vetor.getContTrocaShaker());
+			    
                     break;
                 case 7:
                     System.out.println("Selecionou Quicksort");
+			    vetor.quicksort();
+		System.out.println("\nVetor ordenado: \n" + vetor.toString());
+		System.out.println("Num. Comparacoes: \n" + vetor.getContComparacaoQuick());
+		System.out.println("Num. movimentação: \n" + vetor.getContTrocaQuick());
                     break;
                 default:
                     System.out.println("Opção inválida, tente novamente.");
