@@ -52,7 +52,7 @@ public class ProgramaPrincipal {
 				+ "\n3. Inserção Direta"
 				+ "\n4. Shellsort"
 				+ "\n5. Bubblesort"
-				+ "\n6. Shakesort"
+				+ "\n6. Shakersort"
 				+ "\n7. Quicksort");
 		
 		opcao = scanner.nextInt();
@@ -77,7 +77,7 @@ public class ProgramaPrincipal {
 			break;
 
 		case 4:
-			vetor.shakerSort();
+			vetor.shellSort();
 			System.out.println("Num. Comparacoes: \n" + vetor.getComparacoes());
 			System.out.println("Num. movimentação: \n" + vetor.getMovimentacoes());
 			break;
